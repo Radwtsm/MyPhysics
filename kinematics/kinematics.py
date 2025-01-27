@@ -24,15 +24,16 @@ def object_thrown_by_cliff_1():
     while True:
         y = y0 + v0 * time + (1/2) * a * time**2  # formula posizione
         graph.add_point(time, y)
+        print(round(time,3),y)
 
         # ferma se l'oggetto raggiunge la fine del dirupo.
         if y <= max_depth:
             print(f"The object has reached the bottom of the cliff at t = {time} seconds.")
             break
         
-        time += 1  # Incremento tempo (+1.0s)
+        time += 0.1  # Incremento tempo (+1.0s)
 
-    print('tempo che sta in aria:',time,'s') # tempo impiegato dal moto
+    print('tempo che sta in aria:',round(time,3),'s') # tempo impiegato dal moto
     graph.close()
 
 
